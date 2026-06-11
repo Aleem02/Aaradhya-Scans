@@ -55,7 +55,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="group flex flex-col justify-start">
             <span className="font-serif text-2xl lg:text-3xl font-medium tracking-tight text-brand-emerald group-hover:text-brand-emerald-light transition-colors">
-              Aaradhya
+              Aradhiya
             </span>
             <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-brand-gold font-medium leading-none -mt-1 pl-0.5">
               Scans & Lab

@@ -6,9 +6,9 @@ import { MessageSquare } from 'lucide-react';
 
 export default function BookingFAB() {
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = '919360933128'; // Standard Tamil Nadu code + Aaradhya primary phone placeholder
+    const phoneNumber = '919360933128'; // Standard Tamil Nadu code + Aradhiya primary phone placeholder
     const text = encodeURIComponent(
-      'Hello Aaradhya Scans & Lab, Chidambaram. I would like to book an appointment / enquire about diagnostic services.'
+      'Hello Aradhiya Scans & Lab, Chidambaram. I would like to book an appointment / enquire about diagnostic services.'
     );
     window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
   };

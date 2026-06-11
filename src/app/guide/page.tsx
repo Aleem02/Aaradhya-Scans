@@ -349,7 +349,7 @@ export default function GuidePage() {
               <button
                 onClick={() => {
                   const phoneNumber = '919360933128';
-                  const text = encodeURIComponent('Hello Aaradhya support, I have a question regarding diagnostic test preparation.');
+                  const text = encodeURIComponent('Hello Aradhiya support, I have a question regarding diagnostic test preparation.');
                   window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
                 }}
                 className="px-6 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-charcoal bg-brand-gold hover:bg-brand-gold-light transition-colors cursor-pointer"

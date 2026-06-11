@@ -13,33 +13,33 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aaradhya Scans & Lab | Precision Diagnostics in Chidambaram, Tamil Nadu",
-    template: "%s | Aaradhya Scans & Lab"
+    default: "Aradhiya Scans & Lab | Precision Diagnostics in Chidambaram, Tamil Nadu",
+    template: "%s | Aradhiya Scans & Lab"
   },
   description: "Experience premium, accurate diagnostics in Chidambaram. Offering high-resolution CT Scan, Digital X-Ray, ECG, Echocardiography, and comprehensive laboratory diagnostics.",
   keywords: [
-    "Aaradhya Scans", "Aaradhya Lab", "Aaradhya Scans Chidambaram", "Diagnostic Lab Chidambaram",
+    "Aradhiya Scans", "Aradhiya Lab", "Aradhiya Scans Chidambaram", "Diagnostic Lab Chidambaram",
     "CT Scan Chidambaram", "X-Ray Chidambaram", "Blood Test Chidambaram", "Health Packages Chidambaram",
-    "Echocardiography Chidambaram", "Best Lab in Chidambaram", "Tamil Nadu Lab", "Aaradhya Scans and Lab"
+    "Echocardiography Chidambaram", "Best Lab in Chidambaram", "Tamil Nadu Lab", "Aradhiya Scans and Lab"
   ],
-  authors: [{ name: "Aaradhya Scans & Lab" }],
-  creator: "Aaradhya Scans & Lab",
-  publisher: "Aaradhya Scans & Lab",
-  metadataBase: new URL("https://aaradhyascans.com"),
+  authors: [{ name: "Aradhiya Scans & Lab" }],
+  creator: "Aradhiya Scans & Lab",
+  publisher: "Aradhiya Scans & Lab",
+  metadataBase: new URL("https://aradhiyascans.com"),
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "Aaradhya Scans & Lab | Precision Diagnostics",
+    title: "Aradhiya Scans & Lab | Precision Diagnostics",
     description: "Premium medical scans, blood tests, and health checkups in Chidambaram, Tamil Nadu. Dedicated to absolute precision and patient comfort.",
-    url: "https://aaradhyascans.com",
-    siteName: "Aaradhya Scans & Lab",
+    url: "https://aradhiyascans.com",
+    siteName: "Aradhiya Scans & Lab",
     locale: "en_IN",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aaradhya Scans & Lab | Precision Diagnostics",
+    title: "Aradhiya Scans & Lab | Precision Diagnostics",
     description: "Premium medical scans, blood tests, and health checkups in Chidambaram, Tamil Nadu.",
   },
   icons: {

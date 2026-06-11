@@ -36,7 +36,7 @@ export default function PackagesPage() {
   const handleWhatsAppRedirect = (packageName: string) => {
     const phoneNumber = '919360933128';
     const text = encodeURIComponent(
-      `Hello Aaradhya Scans. I want to book the "${packageName}" health package. Please coordinate the schedule.`
+      `Hello Aradhiya Scans. I want to book the "${packageName}" health package. Please coordinate the schedule.`
     );
     window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
   };

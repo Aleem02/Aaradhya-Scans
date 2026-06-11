@@ -82,7 +82,7 @@ export default function ContactPage() {
     const timeLabel = formData.time === 'morning' ? 'Morning (07:00 AM - 12:00 PM)' : 'Afternoon/Evening (12:00 PM - 09:00 PM)';
 
     const text = encodeURIComponent(
-      `Hello Aaradhya Scans & Lab, Chidambaram.\n\n` +
+      `Hello Aradhiya Scans & Lab, Chidambaram.\n\n` +
       `I would like to book a diagnostic appointment:\n` +
       `• *Patient Name:* ${formData.name}\n` +
       `• *Contact Phone:* ${formData.phone}\n` +
@@ -93,7 +93,7 @@ export default function ContactPage() {
       `Please coordinate the slot confirmation.`
     );
 
-    const phoneNumber = '919360933128'; // Primary Aaradhya Scans Chidambaram contact line
+    const phoneNumber = '919360933128'; // Primary Aradhiya Scans Chidambaram contact line
     
     // Trigger successful animation state
     setIsSuccess(true);
@@ -135,7 +135,7 @@ export default function ContactPage() {
                   <li className="flex items-start gap-x-3">
                     <MapPin className="h-5 w-5 text-brand-gold shrink-0 mt-0.5" />
                     <span>
-                      *Aaradhya Scans & Lab*
+                      *Aradhiya Scans & Lab*
                       <br />
                       39B, Theradi Kovil Street,
                       <br />
@@ -152,8 +152,8 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-center gap-x-3">
                     <Mail className="h-5 w-5 text-brand-emerald shrink-0" />
-                    <a href="mailto:info@aaradhyascans.com" className="hover:text-brand-emerald-dark font-medium transition-colors">
-                      info@aaradhyascans.com
+                    <a href="mailto:info@aradhiyascans.com" className="hover:text-brand-emerald-dark font-medium transition-colors">
+                      info@aradhiyascans.com
                     </a>
                   </li>
                   <li className="flex items-start gap-x-3">
@@ -171,9 +171,9 @@ export default function ContactPage() {
 
               {/* Styled Maps Embed */}
               <div className="w-full h-64 rounded-2xl overflow-hidden border border-brand-charcoal/5 relative shadow-inner">
-                {/* Embed pointer to Aaradhya Scans Google Maps Coordinate (Venugopal St, Chidambaram) */}
+                {/* Embed pointer to Aradhiya Scans Google Maps Coordinate (Venugopal St, Chidambaram) */}
                 <iframe
-                  title="Aaradhya Scans & Lab location map"
+                  title="Aradhiya Scans & Lab location map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3880.893874312151!2d79.69248467479705!3d11.397395087711202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54c25f4625b597%3A0xe54d9f67a6d8881e!2sAaradhya%20Scans%20%26%20Lab!5e0!3m2!1sen!2sin!4v1717900000000!5m2!1sen!2sin"
                   className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-750"
                   allowFullScreen

@@ -285,7 +285,7 @@ export default function ServicesPage() {
                   <button
                     onClick={() => {
                       const phoneNumber = '919360933128';
-                      const text = encodeURIComponent(`Hello Aaradhya Scans. I want to book an appointment for the "${selectedService.name}" test.`);
+                      const text = encodeURIComponent(`Hello Aradhiya Scans. I want to book an appointment for the "${selectedService.name}" test.`);
                       window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
                     }}
                     className="px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-cream bg-brand-emerald hover:bg-brand-emerald-dark transition-colors cursor-pointer"

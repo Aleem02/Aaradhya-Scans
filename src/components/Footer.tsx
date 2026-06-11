@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-6">
             <Link href="/" className="inline-flex flex-col justify-start">
               <span className="font-serif text-3xl font-medium tracking-tight text-brand-ivory">
-                Aaradhya
+                Aradhiya
               </span>
               <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-brand-gold font-medium leading-none -mt-1 pl-0.5">
                 Scans & Lab
@@ -122,7 +122,7 @@ export default function Footer() {
         {/* Legal Disclaimer */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-y-4 text-xs text-brand-ivory/40">
           <div className="text-center sm:text-left">
-            &copy; {currentYear} Aaradhya Scans & Lab. All rights reserved.
+            &copy; {currentYear} Aradhiya Scans & Lab. All rights reserved.
           </div>
           <div className="flex gap-x-6">
             <Link href="/privacy" className="hover:text-brand-ivory transition-colors">

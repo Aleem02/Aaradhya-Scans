@@ -40,13 +40,13 @@ export default function AboutPage() {
                 <span className="italic text-brand-emerald">Absolute Precision</span>
               </h1>
               <p className="font-sans text-sm sm:text-base text-brand-charcoal/70 leading-relaxed">
-                We started Aaradhya Scans with a simple intention: to replace typical hospital-aesthetic diagnostics with a warm, patient-first facility backed by high-precision testing systems in Chidambaram.
+                We started Aradhiya Scans with a simple intention: to replace typical hospital-aesthetic diagnostics with a warm, patient-first facility backed by high-precision testing systems in Chidambaram.
               </p>
             </div>
             <div className="lg:col-span-5 relative w-full h-[320px] rounded-3xl overflow-hidden border border-brand-charcoal/5 shadow-md bg-brand-white">
               <Image
                 src="/images/about_hero.png"
-                alt="Aaradhya Scans Premium Diagnostics Environment"
+                alt="Aradhiya Scans Premium Diagnostics Environment"
                 fill
                 sizes="(max-w-7xl) 40vw, 100vw"
                 className="object-cover"
@@ -133,7 +133,7 @@ export default function AboutPage() {
                   Supporting Tamil Nadu Families
                 </h2>
                 <p className="font-sans text-sm text-brand-charcoal/70 leading-relaxed">
-                  We believe diagnostic screening should be accessible to all parts of the community. Aaradhya works actively alongside local health registries and provides subsidized screening programs, health awareness initiatives, and mobile sample collections for older adults in and around Chidambaram.
+                  We believe diagnostic screening should be accessible to all parts of the community. Aradhiya works actively alongside local health registries and provides subsidized screening programs, health awareness initiatives, and mobile sample collections for older adults in and around Chidambaram.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex gap-x-2 text-xs text-brand-charcoal/70">
@@ -167,7 +167,7 @@ export default function AboutPage() {
                 <button
                   onClick={() => {
                     const phoneNumber = '919360933128';
-                    const text = encodeURIComponent('Hello Aaradhya. I would like to book a Home Sample Collection service in Chidambaram.');
+                    const text = encodeURIComponent('Hello Aradhiya. I would like to book a Home Sample Collection service in Chidambaram.');
                     window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
                   }}
                   className="w-full py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-cream bg-brand-emerald hover:bg-brand-emerald-dark transition-colors cursor-pointer"

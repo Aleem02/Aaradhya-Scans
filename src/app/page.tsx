@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. WHY AARADHYA - FEATURE GRID */}
+      {/* 2. WHY ARADHIYA - FEATURE GRID */}
       <section className="py-24 bg-brand-white border-t border-brand-charcoal/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-2xl text-left mb-16 space-y-4">
@@ -103,7 +103,7 @@ export default function Home() {
             <div className="lg:col-span-5 relative min-h-[320px] rounded-3xl overflow-hidden border border-brand-charcoal/5 shadow-sm bg-brand-cream">
               <Image
                 src="/images/clinic_interior.png"
-                alt="Aaradhya Scans Advanced Clinical Scanning Room"
+                alt="Aradhiya Scans Advanced Clinical Scanning Room"
                 fill
                 sizes="(max-w-7xl) 40vw, 100vw"
                 className="object-cover"
@@ -341,7 +341,7 @@ export default function Home() {
                   Designed for Trust, Executed with Care
                 </h2>
                 <p className="font-sans text-sm text-brand-charcoal/70 leading-relaxed">
-                  Diagnostics shouldn\'t feel clinical and cold. At Aaradhya, we\'ve restructured the testing journey to build complete confidence. We maintain a warm, welcoming environment while deploying automated testing platforms that ensure clinical reports are returned with the utmost integrity.
+                  Diagnostics shouldn\'t feel clinical and cold. At Aradhiya, we\'ve restructured the testing journey to build complete confidence. We maintain a warm, welcoming environment while deploying automated testing platforms that ensure clinical reports are returned with the utmost integrity.
                 </p>
               </div>
 
@@ -378,7 +378,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "Aaradhya sets the standard for laboratory precision. As a practicing clinician, I need reports that I can trust immediately. Their documentation is clear, accurate, and consistent.",
+                quote: "Aradhiya sets the standard for laboratory precision. As a practicing clinician, I need reports that I can trust immediately. Their documentation is clear, accurate, and consistent.",
                 author: "Dr. K. Balasubramanian",
                 title: "Consultant Physician, Chidambaram"
               },
