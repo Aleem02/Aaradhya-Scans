@@ -54,12 +54,12 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <h1 className="font-serif text-5xl sm:text-6xl xl:text-7xl font-light tracking-tight text-brand-charcoal leading-[1.05]">
-                  Precision <br className="hidden sm:inline" />
-                  Behind Every <br />
-                  <span className="font-serif italic font-normal text-brand-emerald">Diagnosis</span>
+                  Absolute <br className="hidden sm:inline" />
+                  Clarity. Complete <br />
+                  <span className="font-serif italic font-normal text-brand-emerald">Precision</span>
                 </h1>
                 <p className="font-sans text-base sm:text-lg text-brand-charcoal/70 max-w-xl leading-relaxed">
-                  Advanced imaging, pathology, and preventive healthcare services trusted by families and physicians in Chidambaram.
+                  Next-generation diagnostic imaging, cardiac evaluations, and automated pathology. Engineered for clinical accuracy, double-verified by specialists, and trusted by physicians in Chidambaram.
                 </p>
               </div>
 
