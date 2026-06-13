@@ -213,7 +213,7 @@ export default function Home() {
               return (
                 <div
                   key={idx}
-                  className="bg-brand-white border border-brand-charcoal/5 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:shadow-lg hover:border-brand-gold/15 transition-all duration-300 text-left relative overflow-hidden group hover:-translate-y-1 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[3px] before:bg-brand-gold before:rounded-l-3xl before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
+                  className="bg-brand-white border border-brand-charcoal/5 rounded-3xl p-6 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-lg hover:border-brand-gold/15 transition-all duration-300 text-left relative overflow-hidden group hover:-translate-y-1 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[3px] before:bg-brand-gold before:rounded-l-3xl before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300"
                 >
                   {/* Premium Gold Accent Glow */}
                   <div className="absolute right-[-20px] top-[-20px] w-24 h-24 bg-brand-gold/5 rounded-full blur-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -316,7 +316,7 @@ export default function Home() {
                 return (
                   <div
                     key={pkg.id}
-                    className="bg-brand-white border border-brand-charcoal/5 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl p-6 sm:p-8 flex flex-col justify-between h-auto group overflow-hidden shadow-xs hover:shadow-xl hover:border-brand-emerald/20 transition-all duration-500 text-left relative hover:-translate-y-1.5"
+                    className="bg-brand-white border border-brand-charcoal/5 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl p-6 sm:p-8 flex flex-col justify-between h-auto group overflow-hidden shadow-md hover:shadow-xl hover:border-brand-emerald/20 transition-all duration-500 text-left relative hover:-translate-y-1.5"
                   >
                     {/* Gold Accent Glow */}
                     <div className="absolute right-[-10px] top-[-10px] w-28 h-28 bg-gradient-to-br from-brand-gold/10 to-brand-emerald/5 rounded-full blur-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

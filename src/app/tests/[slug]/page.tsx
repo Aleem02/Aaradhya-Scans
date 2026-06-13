@@ -470,7 +470,7 @@ export default function TestDetailPage({ params }: PageProps) {
                 return (
                   <div
                     key={relatedPkg.id}
-                    className="bg-brand-white border border-brand-charcoal/5 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl p-6 flex flex-col justify-between h-auto group overflow-hidden shadow-xs hover:shadow-xl hover:border-brand-emerald/20 transition-all duration-500 relative hover:-translate-y-1.5"
+                    className="bg-brand-white border border-brand-charcoal/5 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl p-6 flex flex-col justify-between h-auto group overflow-hidden shadow-md hover:shadow-xl hover:border-brand-emerald/20 transition-all duration-500 relative hover:-translate-y-1.5"
                   >
                     {/* Gold Accent Glow */}
                     <div className="absolute right-[-10px] top-[-10px] w-28 h-28 bg-gradient-to-br from-brand-gold/10 to-brand-emerald/5 rounded-full blur-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

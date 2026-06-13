@@ -195,7 +195,7 @@ export default function TestsCatalogPage() {
               return (
                 <div 
                   key={`${item.category}-${item.id}`}
-                  className="bg-brand-white border border-brand-charcoal/5 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl p-5 sm:p-7 flex flex-col justify-between hover:shadow-xl hover:border-brand-emerald/20 transition-all duration-500 text-left relative overflow-hidden group hover:-translate-y-1.5"
+                  className="bg-brand-white border border-brand-charcoal/5 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-2xl rounded-bl-2xl p-5 sm:p-7 flex flex-col justify-between shadow-md hover:shadow-xl hover:border-brand-emerald/20 transition-all duration-500 text-left relative overflow-hidden group hover:-translate-y-1.5"
                 >
                   {/* Gold Accent Glow */}
                   <div className="absolute right-[-10px] top-[-10px] w-28 h-28 bg-gradient-to-br from-brand-gold/10 to-brand-emerald/5 rounded-full blur-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
