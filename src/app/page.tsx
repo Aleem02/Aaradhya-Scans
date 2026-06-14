@@ -196,15 +196,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
+              { id: 'ultrasound', title: 'Ultrasound Scan', desc: 'High-resolution abdominal, pelvic, and obstetric scanning utilizing safe sound waves.', image: '/images/premium_ultrasound.png' },
+              { id: 'master-health-check-up', title: 'Master Health Checkup', desc: 'A comprehensive preventive screening program assessing vital organs and general wellness.', image: '/images/premium_health_packages.png', isPackage: true },
               { id: 'ct-scan', title: 'CT Scan', desc: 'High-speed multi-slice scanning yielding precise skeletal and vascular views.', image: '/images/premium_ct_scan.png' },
-              { id: 'digital-x-ray', title: 'Digital X-Ray', desc: 'Low-dose immediate radiography providing bone structural detail.', image: '/images/xray.png' },
-              { id: 'ecg', title: 'ECG (Electrocardiogram)', desc: '12-lead electrical tracing evaluating rhythm, pulse, and ischemic details.', image: '/images/ecg.png' },
               { id: 'echocardiography', title: 'Echocardiography', desc: 'High-fidelity ultrasound mapping active cardiovascular structural integrity.', image: '/images/echo.png' },
-              { id: 'blood-tests', title: 'Laboratory Diagnostics', desc: 'Pathology testing covering endocrine, hematology, and metabolic screening.', image: '/images/premium_blood_tests.png' },
-              { id: 'ultrasound', title: 'Ultrasound Scan', desc: 'High-resolution abdominal, pelvic, and obstetric scanning utilizing safe sound waves.', image: '/images/premium_ultrasound.png' }
+              { id: 'digital-x-ray', title: 'Digital X-Ray', desc: 'Low-dose immediate radiography providing bone structural detail.', image: '/images/xray.png' },
+              { id: 'ecg', title: 'ECG (Electrocardiogram)', desc: '12-lead electrical tracing evaluating rhythm, pulse, and ischemic details.', image: '/images/ecg.png' }
             ].map((srv, idx) => {
               const categoryTag =
-                srv.id === 'blood-tests' ? 'Pathology Lab' :
+                srv.id === 'master-health-check-up' ? 'Pathology Lab' :
                   (srv.id === 'ecg' || srv.id === 'echocardiography') ? 'Cardiac' :
                     'Imaging';
 
@@ -252,7 +252,7 @@ export default function Home() {
                   <div className="mt-auto pt-5 border-t border-brand-charcoal/5">
                     <div className="grid grid-cols-2 gap-3 items-center">
                       <Link
-                        href={`/services/${srv.id}`}
+                        href={srv.isPackage ? `/tests/${srv.id}` : `/services/${srv.id}`}
                         className="w-full border border-brand-charcoal/10 hover:bg-brand-cream hover:text-brand-emerald text-brand-charcoal text-[10px] font-bold uppercase tracking-wider text-center rounded-full py-3 block transition duration-300"
                       >
                         View Detail

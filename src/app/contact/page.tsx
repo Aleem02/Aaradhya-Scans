@@ -79,7 +79,7 @@ export default function ContactPage() {
     };
 
     const selectedTest = testLabels[formData.testType] || formData.testType;
-    const timeLabel = formData.time === 'morning' ? 'Morning (07:00 AM - 12:00 PM)' : 'Afternoon/Evening (12:00 PM - 09:00 PM)';
+    const timeLabel = formData.time === 'morning' ? 'Morning (07:30 AM - 12:00 PM)' : 'Afternoon/Evening (12:00 PM - 08:00 PM)';
 
     const text = encodeURIComponent(
       `Hello Aradhiya Scans & Lab, Chidambaram.\n\n` +
@@ -161,9 +161,9 @@ export default function ContactPage() {
                     <span>
                       *Clinical Schedule:*
                       <br />
-                      Mon - Sat: 07:00 AM - 09:00 PM
+                      Mon - Sat: 07:30 AM - 08:00 PM
                       <br />
-                      Sunday: 07:00 AM - 02:00 PM
+                      Sunday: 07:30 AM - 02:00 PM
                     </span>
                   </li>
                 </ul>
@@ -318,8 +318,8 @@ export default function ContactPage() {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 text-xs bg-brand-cream rounded-xl border border-brand-charcoal/5 focus:outline-none focus:border-brand-emerald/30 text-brand-charcoal cursor-pointer"
                       >
-                        <option value="morning">Morning (07:00 AM - 12:00 PM)</option>
-                        <option value="afternoon">Afternoon/Evening (12:00 PM - 09:00 PM)</option>
+                        <option value="morning">Morning (07:30 AM - 12:00 PM)</option>
+                        <option value="afternoon">Afternoon/Evening (12:00 PM - 08:00 PM)</option>
                       </select>
                     </div>
                   </div>

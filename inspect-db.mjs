@@ -53,7 +53,7 @@ async function inspect() {
   const profilesSnap = await getDocs(collection(db, "test_profiles"));
   profilesSnap.forEach(doc => {
     const data = doc.data();
-    console.log(`Profile ID: ${doc.id}, Name: ${data.name}, Image: ${data.image || 'none'}`);
+    console.log(`Profile ID: ${doc.id}, Data: ${JSON.stringify(data, null, 2)}`);
   });
 }
 

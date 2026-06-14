@@ -146,7 +146,7 @@ export default function GuidePage() {
                       <AlertCircle className="h-6 w-6 text-brand-gold" />
                       <h4 className="font-serif text-sm font-semibold text-brand-charcoal">Crucial reminder</h4>
                       <p className="font-sans text-[11px] text-brand-charcoal/60 leading-relaxed">
-                        Arrive at our Chidambaram center between 07:00 AM and 09:30 AM for fasting blood draws to ensure optimal diagnostic integrity and prompt return times.
+                        Arrive at our Chidambaram center between 07:30 AM and 10:00 AM for fasting blood draws to ensure optimal diagnostic integrity and prompt return times.
                       </p>
                     </div>
                   </motion.div>

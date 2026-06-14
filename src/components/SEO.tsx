@@ -30,13 +30,13 @@ export default function SEO() {
       {
         '@type': 'OpeningHoursSpecification',
         'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        'opens': '07:00',
-        'closes': '21:00'
+        'opens': '07:30',
+        'closes': '20:00'
       },
       {
         '@type': 'OpeningHoursSpecification',
         'dayOfWeek': 'Sunday',
-        'opens': '07:00',
+        'opens': '07:30',
         'closes': '14:00'
       }
     ],
