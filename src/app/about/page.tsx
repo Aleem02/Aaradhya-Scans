@@ -1,8 +1,6 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { 
   ShieldCheck, 
   Target, 
@@ -14,9 +12,16 @@ import {
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 
+export const metadata: Metadata = {
+  title: "About Us | Aradhiya Scans & Lab Chidambaram",
+  description: "Learn about Aradhiya Scans & Lab, our chief consultant radiologist Dr. Anand, M.D.R.D., and our calibration standards for absolute diagnostic precision in Tamil Nadu.",
+  alternates: {
+    canonical: "/about"
+  }
+};
+
 export default function AboutPage() {
-
-
+  const whatsappUrl = `https://wa.me/919360933128?text=${encodeURIComponent('Hello Aradhiya. I would like to book a Home Sample Collection service in Chidambaram.')}`;
 
   return (
     <>
@@ -66,7 +71,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-serif text-xl font-medium text-brand-charcoal">Diagnostic Excellence</h3>
               <p className="font-sans text-xs text-brand-charcoal/60 leading-relaxed">
-                We utilize fully-automated clinical paths and daily control calibrations. Our technicians and pathologs double-check all anomalous readings before finalizing reports.
+                We utilize fully-automated clinical paths and daily control calibrations. Our technicians and pathologists double-check all anomalous readings before finalizing reports.
               </p>
             </div>
 
@@ -215,20 +220,17 @@ export default function AboutPage() {
                     Our certified phlebotomists can visit your residence in Chidambaram to collect samples. Fasting requirements apply as normal.
                   </p>
                 </div>
-                <button
-                  onClick={() => {
-                    const phoneNumber = '919360933128';
-                    const text = encodeURIComponent('Hello Aradhiya. I would like to book a Home Sample Collection service in Chidambaram.');
-                    window.open(`https://wa.me/${phoneNumber}?text=${text}`, '_blank');
-                  }}
-                  className="w-full py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-cream bg-brand-emerald hover:bg-brand-emerald-dark transition-colors cursor-pointer"
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-cream bg-brand-emerald hover:bg-brand-emerald-dark transition-colors text-center block"
                 >
                   Book Home Collection
-                </button>
+                </a>
               </div>
             </div>
           </section>
-
 
         </div>
       </div>

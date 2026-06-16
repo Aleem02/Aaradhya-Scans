@@ -105,8 +105,15 @@ export default function Footer() {
         </div>
 
         {/* Legal Disclaimer */}
-        <div className="pt-8 text-center sm:text-left text-xs text-brand-ivory/40">
-          &copy; {currentYear} Aradhiya Scans & Lab. All rights reserved.
+        <div className="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-brand-ivory/40 gap-y-4">
+          <div>
+            &copy; {currentYear} Aradhiya Scans & Lab. All rights reserved.
+          </div>
+          <div>
+            <Link href="/admin" className="hover:text-brand-gold transition-colors font-semibold tracking-wider uppercase text-[10px]">
+              Staff Login
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

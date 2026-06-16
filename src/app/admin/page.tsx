@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { AuthProvider, useAuth } from "@/lib/auth-context";
 import { isFirebaseConfigured } from "@/lib/firebase";
 import { fetchTests, addTest, updateTest, deleteTest, fetchTestProfiles, addTestProfile, updateTestProfile, deleteTestProfile } from "@/lib/tests-service";
+import { revalidateCatalog } from "@/app/actions";
 import { type MedicalTest, type TestProfile, type Availability, type PackageCategory } from "@/lib/types";
 import { toast } from "sonner";
 import {
@@ -348,6 +349,7 @@ function TabTests() {
       try {
         await deleteTest(id);
         toast.success("Test deleted successfully");
+        await revalidateCatalog();
         loadTests();
       } catch (err: any) {
         toast.error("Failed to delete test: " + err.message);
@@ -383,6 +385,7 @@ function TabTests() {
         await addTest(payload);
         toast.success("Test added successfully");
       }
+      await revalidateCatalog();
       resetForm();
       loadTests();
     } catch (err: any) {
@@ -798,6 +801,7 @@ function TabPackages() {
       try {
         await deleteTestProfile(id);
         toast.success("Package deleted successfully");
+        await revalidateCatalog();
         loadPackages();
       } catch (err: any) {
         toast.error("Failed to delete package: " + err.message);
@@ -817,6 +821,7 @@ function TabPackages() {
       }
       await updateTestProfile(pkg.id, { showOnHome: updatedStatus });
       toast.success(`Package "${pkg.name}" ${updatedStatus ? "featured on homepage" : "removed from homepage"}`);
+      await revalidateCatalog();
       loadPackages();
     } catch (err: any) {
       toast.error("Failed to toggle homepage status: " + err.message);
@@ -860,6 +865,7 @@ function TabPackages() {
         await addTestProfile(payload);
         toast.success("Package added successfully");
       }
+      await revalidateCatalog();
       resetForm();
       loadPackages();
     } catch (err: any) {
