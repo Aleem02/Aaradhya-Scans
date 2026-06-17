@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { getCachedTestProfiles } from '@/lib/cached-tests';
 import HomeClient from '@/components/HomeClient';
 import SEO from '@/components/SEO';
+import { type TestProfile } from '@/lib/types';
 
 export const metadata: Metadata = {
   title: "Aradhiya Scans & Lab | Precision Diagnostics in Chidambaram, Tamil Nadu",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  let featuredPackages: any[] = [];
+  let featuredPackages: TestProfile[] = [];
   try {
     const allProfiles = await getCachedTestProfiles();
     featuredPackages = allProfiles.filter(p => p.showOnHome);

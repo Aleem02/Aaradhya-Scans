@@ -4,9 +4,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
-  Droplet, 
-  Clock, 
-  Activity, 
   HelpCircle, 
   AlertCircle,
   CheckCircle2,
@@ -93,15 +90,15 @@ export default function GuidePage() {
 
             {/* Preparation Tabs */}
             <div className="flex flex-wrap gap-2">
-              {[
+              {([
                 { id: 'blood', label: 'Blood Pathology Tests' },
                 { id: 'ct', label: 'CT Scan Imaging' },
                 { id: 'ecg', label: 'ECG / Echo Cardiac' },
                 { id: 'urine', label: 'Urinalysis Sample' }
-              ].map((tab) => (
+              ] as const).map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActivePrepTab(tab.id as any)}
+                  onClick={() => setActivePrepTab(tab.id)}
                   className={`px-5 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
                     activePrepTab === tab.id
                       ? 'bg-brand-emerald text-brand-cream border-transparent'

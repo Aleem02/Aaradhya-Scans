@@ -182,7 +182,7 @@ export async function fetchServiceBySlug(slug: string, type?: string): Promise<M
       const snapProfile = await withTimeout(getDocs(qProfile));
       if (!snapProfile.empty) {
         const d = snapProfile.docs[0];
-        const data = d.data() as any;
+        const data = d.data() as Omit<TestProfile, "id"> & { isDeleted?: boolean };
         if (data.isDeleted) return null;
         return { id: d.id, ...data };
       }
@@ -191,7 +191,7 @@ export async function fetchServiceBySlug(slug: string, type?: string): Promise<M
       const snapTest = await withTimeout(getDocs(qTest));
       if (!snapTest.empty) {
         const d = snapTest.docs[0];
-        const data = d.data() as any;
+        const data = d.data() as Omit<MedicalTest, "id"> & { isDeleted?: boolean };
         if (data.isDeleted) return null;
         return { id: d.id, ...data };
       }
@@ -201,7 +201,7 @@ export async function fetchServiceBySlug(slug: string, type?: string): Promise<M
     const snapTest = await withTimeout(getDocs(qTest));
     if (!snapTest.empty) {
       const d = snapTest.docs[0];
-      const data = d.data() as any;
+      const data = d.data() as Omit<MedicalTest, "id"> & { isDeleted?: boolean };
       if (data.isDeleted) return null;
       return { id: d.id, ...data };
     }
@@ -210,7 +210,7 @@ export async function fetchServiceBySlug(slug: string, type?: string): Promise<M
     const snapProfile = await withTimeout(getDocs(qProfile));
     if (!snapProfile.empty) {
       const d = snapProfile.docs[0];
-      const data = d.data() as any;
+      const data = d.data() as Omit<TestProfile, "id"> & { isDeleted?: boolean };
       if (data.isDeleted) return null;
       return { id: d.id, ...data };
     }

@@ -87,16 +87,16 @@ export async function checkFirebaseReachable(): Promise<{ reachable: boolean; re
     isReachable = true;
     try {
       localStorage.setItem("firebase_reachable", "true");
-    } catch (_) {}
+    } catch {}
     return { reachable: true };
-  } catch (err: any) {
+  } catch (err) {
     console.error("Firebase reachability check failed:", err);
     isReachable = false;
     try {
       localStorage.setItem("firebase_reachable", "false");
-    } catch (_) {}
+    } catch {}
     let reason = "Network connection failed or timed out.";
-    if (err.name === "AbortError") {
+    if (err instanceof Error && err.name === "AbortError") {
       reason = "Connection timed out (Firebase servers took too long to respond).";
     } else if (typeof window !== "undefined" && !navigator.onLine) {
       reason = "Your device is offline.";
@@ -122,7 +122,7 @@ export async function withTimeout<T>(promise: Promise<T>, ms = 3000): Promise<T>
     );
   }
 
-  let timeoutId: any;
+  let timeoutId: ReturnType<typeof setTimeout> | undefined = undefined;
   const timeout = new Promise<never>((_, reject) => {
     timeoutId = setTimeout(() => {
       reject(new Error("Connection timed out. Please hard-refresh the page (Ctrl+F5) and try again."));

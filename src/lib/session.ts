@@ -11,7 +11,7 @@ async function getCryptoKey(secret: string): Promise<CryptoKey> {
   );
 }
 
-export async function signSession(payload: any, secret: string): Promise<string> {
+export async function signSession(payload: Record<string, unknown>, secret: string): Promise<string> {
   const dataStr = JSON.stringify(payload);
   const dataBuffer = encoder.encode(dataStr);
   const cryptoKey = await getCryptoKey(secret);
@@ -23,7 +23,7 @@ export async function signSession(payload: any, secret: string): Promise<string>
   return `${payloadBase64}.${signatureHex}`;
 }
 
-export async function verifySession(token: string, secret: string): Promise<any | null> {
+export async function verifySession(token: string, secret: string): Promise<Record<string, unknown> | null> {
   try {
     const [payloadBase64, signatureHex] = token.split(".");
     if (!payloadBase64 || !signatureHex) return null;

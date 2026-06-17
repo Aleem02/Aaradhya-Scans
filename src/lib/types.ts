@@ -32,9 +32,9 @@ export interface TestProfile extends Omit<MedicalTest, 'category' | 'biomarkers'
 export interface PatientUser {
   phone: string;
   pinHash: string;
-  createdAt: any;
+  createdAt: unknown;
   failedAttempts?: number;
-  lockoutUntil?: any;
+  lockoutUntil?: unknown;
 }
 
 export interface PatientReport {
@@ -43,5 +43,5 @@ export interface PatientReport {
   patientName: string;
   testName: string;
   reportUrl: string;
-  createdAt: any;
+  createdAt: unknown;
 }

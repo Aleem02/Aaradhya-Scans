@@ -16,17 +16,17 @@ import { servicesData } from '@/data/servicesData';
 import SEO from '@/components/SEO';
 
 const serviceImages: Record<string, string> = {
-  'ultrasound': '/images/premium_ultrasound.png',
-  'ct-scan': '/images/premium_ct_scan.png',
-  'digital-x-ray': '/images/xray.png',
-  'sonomammography': '/images/premium_sonomammography_v2.png',
-  'eeg': '/images/premium_eeg.png',
-  'ecg': '/images/ecg.png',
-  'echocardiography': '/images/echo.png',
-  'blood-tests': '/images/premium_blood_tests.png',
-  'urine-analysis': '/images/premium_urinalysis.png',
-  'hormone-testing': '/images/premium_hormone_testing.png',
-  'cholesterol-screening': '/images/premium_lipid_panel.png',
+  'ultrasound': '/images/premium_ultrasound_v3.png',
+  'ct-scan': '/images/premium_ct_scan_v3.png',
+  'digital-x-ray': '/images/xray_v3.png',
+  'sonomammography': '/images/premium_sonomammography_v3.png',
+  'eeg': '/images/premium_eeg_v3.png',
+  'ecg': '/images/ecg_v3.png',
+  'echocardiography': '/images/echo_v3.png',
+  'blood-tests': '/images/premium_blood_tests_v3.png',
+  'urine-analysis': '/images/premium_urinalysis_v3.png',
+  'hormone-testing': '/images/premium_hormone_testing_v3.png',
+  'cholesterol-screening': '/images/premium_lipid_panel_v3.png',
 };
 
 interface PageProps {

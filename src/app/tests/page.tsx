@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Sparkles } from 'lucide-react';
 import { getCachedTests, getCachedTestProfiles } from '@/lib/cached-tests';
 import TestsCatalogClient from '@/components/TestsCatalogClient';
+import { type MedicalTest, type TestProfile } from '@/lib/types';
 import SEO from '@/components/SEO';
 
 export const metadata: Metadata = {
@@ -21,8 +22,8 @@ export default async function TestsCatalogPage({ searchParams }: PageProps) {
   const resolvedSearchParams = await searchParams;
   const initialSearchQuery = resolvedSearchParams.query || '';
 
-  let tests: any[] = [];
-  let profiles: any[] = [];
+  let tests: MedicalTest[] = [];
+  let profiles: TestProfile[] = [];
 
   try {
     tests = await getCachedTests();

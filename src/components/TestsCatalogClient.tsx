@@ -5,9 +5,7 @@ import Link from 'next/link';
 import { 
   Search, 
   Clock, 
-  Sparkles,
-  ArrowRight,
-  Loader2
+  ArrowRight
 } from 'lucide-react';
 import { type MedicalTest, type TestProfile } from '@/lib/types';
 

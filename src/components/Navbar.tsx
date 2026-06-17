@@ -38,9 +38,11 @@ export default function Navbar() {
   }, []);
 
   // Close mobile menu on page change
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setIsOpen(false);
-  }, [pathname]);
+  }
 
   return (
     <header

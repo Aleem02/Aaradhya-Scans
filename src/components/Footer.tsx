@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Phone, MapPin, Clock } from 'lucide-react';
 import { servicesData } from '@/data/servicesData';
 
 export default function Footer() {

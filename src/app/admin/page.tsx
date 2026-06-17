@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { AuthProvider, useAuth } from "@/lib/auth-context";
-import { isFirebaseConfigured } from "@/lib/firebase";
 import { fetchTests, addTest, updateTest, deleteTest, fetchTestProfiles, addTestProfile, updateTestProfile, deleteTestProfile } from "@/lib/tests-service";
 import { revalidateCatalog } from "@/app/actions";
 import { type MedicalTest, type TestProfile, type Availability, type PackageCategory } from "@/lib/types";
@@ -46,6 +45,7 @@ function AdminDashboard() {
       try {
         await logout();
       } catch (err) {
+        console.error("Logout failed:", err);
         toast.error("Logout failed");
       }
     }
@@ -178,7 +178,7 @@ function AdminDashboard() {
 /* ==========================================================================
    Tab 1: Overview Dashboard
    ========================================================================== */
-function TabOverview({ activeTabTo }: { activeTabTo: (tab: any) => void }) {
+function TabOverview({ activeTabTo }: { activeTabTo: (tab: "overview" | "tests" | "packages") => void }) {
   const [stats, setStats] = useState({ tests: 0, packages: 0 });
   const [loading, setLoading] = useState(true);
 
@@ -302,8 +302,10 @@ function TabTests() {
     }
   };
 
-  const loadTests = async () => {
-    setLoading(true);
+  const loadTests = async (showLoading = false) => {
+    if (showLoading) {
+      setLoading(true);
+    }
     try {
       const list = await fetchTests();
       setTests(list.filter(t => t.category !== "Test Profiles"));
@@ -314,7 +316,12 @@ function TabTests() {
     }
   };
 
-  useEffect(() => { loadTests(); }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      loadTests();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   const resetForm = () => {
     setName("");
@@ -351,8 +358,9 @@ function TabTests() {
         toast.success("Test deleted successfully");
         await revalidateCatalog();
         loadTests();
-      } catch (err: any) {
-        toast.error("Failed to delete test: " + err.message);
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : "Unknown error";
+        toast.error("Failed to delete test: " + msg);
       }
     }
   };
@@ -388,8 +396,9 @@ function TabTests() {
       await revalidateCatalog();
       resetForm();
       loadTests();
-    } catch (err: any) {
-      toast.error("Failed to save test: " + err.message);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      toast.error("Failed to save test: " + msg);
     }
   };
 
@@ -746,8 +755,10 @@ function TabPackages() {
     }
   };
 
-  const loadPackages = async () => {
-    setLoading(true);
+  const loadPackages = async (showLoading = false) => {
+    if (showLoading) {
+      setLoading(true);
+    }
     try {
       const list = await fetchTestProfiles();
       setPackages(list);
@@ -758,7 +769,12 @@ function TabPackages() {
     }
   };
 
-  useEffect(() => { loadPackages(); }, []);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      loadPackages();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   const resetForm = () => {
     setName("");
@@ -803,8 +819,9 @@ function TabPackages() {
         toast.success("Package deleted successfully");
         await revalidateCatalog();
         loadPackages();
-      } catch (err: any) {
-        toast.error("Failed to delete package: " + err.message);
+      } catch (err) {
+        const msg = err instanceof Error ? err.message : "Unknown error";
+        toast.error("Failed to delete package: " + msg);
       }
     }
   };
@@ -823,8 +840,9 @@ function TabPackages() {
       toast.success(`Package "${pkg.name}" ${updatedStatus ? "featured on homepage" : "removed from homepage"}`);
       await revalidateCatalog();
       loadPackages();
-    } catch (err: any) {
-      toast.error("Failed to toggle homepage status: " + err.message);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      toast.error("Failed to toggle homepage status: " + msg);
     }
   };
 
@@ -868,8 +886,9 @@ function TabPackages() {
       await revalidateCatalog();
       resetForm();
       loadPackages();
-    } catch (err: any) {
-      toast.error("Failed to save package: " + err.message);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Unknown error";
+      toast.error("Failed to save package: " + msg);
     }
   };
 
@@ -1283,8 +1302,9 @@ function AdminLoginForm({ login }: { login: (e: string, p: string) => Promise<vo
     setIsLoading(true);
     try {
       await login(email, password);
-    } catch (err: any) {
-      setErrorMsg(err.message || "Failed to log in. Please check your credentials.");
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Failed to log in. Please check your credentials.";
+      setErrorMsg(msg);
     } finally {
       setIsLoading(false);
     }

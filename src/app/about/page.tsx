@@ -43,7 +43,7 @@ export default function AboutPage() {
             </div>
             <div className="lg:col-span-5 relative w-full h-[320px] rounded-3xl overflow-hidden border border-brand-charcoal/5 shadow-md bg-brand-white">
               <Image
-                src="/images/premium_about_hero_v3.png"
+                src="/images/premium_about_hero_v4.png"
                 alt="Aradhiya Scans Premium Diagnostics Environment"
                 fill
                 sizes="(max-w-7xl) 40vw, 100vw"

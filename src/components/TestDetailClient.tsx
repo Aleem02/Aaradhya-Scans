@@ -25,45 +25,45 @@ function getImageUrl(item: MedicalTest | TestProfile) {
   const nameLower = item.name.toLowerCase();
 
   if (nameLower.includes("ct scan") || nameLower.includes("computed tomography")) {
-    return "/images/premium_ct_scan.png";
+    return "/images/premium_ct_scan_v3.png";
   }
   if (nameLower.includes("sonomammography") || nameLower.includes("breast ultrasound")) {
-    return "/images/premium_sonomammography_v2.png";
+    return "/images/premium_sonomammography_v3.png";
   }
   if (nameLower.includes("ultrasound") || nameLower.includes("usg") || nameLower.includes("sonography") || nameLower.includes("scan")) {
-    return "/images/premium_ultrasound.png";
+    return "/images/premium_ultrasound_v3.png";
   }
   if (nameLower.includes("x-ray") || nameLower.includes("xray") || nameLower.includes("radiography")) {
-    return "/images/xray.png";
+    return "/images/xray_v3.png";
   }
   if (nameLower.includes("eeg") || nameLower.includes("electroencephalogram")) {
-    return "/images/premium_eeg.png";
+    return "/images/premium_eeg_v3.png";
   }
   if (nameLower.includes("ecg") || nameLower.includes("electrocardiogram")) {
-    return "/images/ecg.png";
+    return "/images/ecg_v3.png";
   }
   if (nameLower.includes("echo") || nameLower.includes("echocardiography")) {
-    return "/images/echo.png";
+    return "/images/echo_v3.png";
   }
   if (nameLower.includes("blood test") || nameLower.includes("blood-test") || nameLower.includes("hemoglobin") || nameLower.includes("cbc")) {
-    return "/images/premium_blood_tests.png";
+    return "/images/premium_blood_tests_v3.png";
   }
   if (nameLower.includes("urinalysis") || nameLower.includes("urine")) {
-    return "/images/premium_urinalysis.png";
+    return "/images/premium_urinalysis_v3.png";
   }
   if (nameLower.includes("hormone") || nameLower.includes("thyroid")) {
-    return "/images/premium_hormone_testing.png";
+    return "/images/premium_hormone_testing_v3.png";
   }
   if (nameLower.includes("lipid") || nameLower.includes("cholesterol")) {
-    return "/images/premium_lipid_panel.png";
+    return "/images/premium_lipid_panel_v3.png";
   }
 
   // Fallback for packages
   if (item.category === "Test Profiles" || nameLower.includes("package") || nameLower.includes("profile") || nameLower.includes("wellness")) {
-    return "/images/premium_health_packages.png";
+    return "/images/premium_health_packages_v3.png";
   }
 
-  return "/images/lab.png";
+  return "/images/lab_v3.png";
 }
 
 interface TestDetailClientProps {
