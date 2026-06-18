@@ -15,7 +15,9 @@ import {
   Calendar,
   Users,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Phone,
+  MessageSquare
 } from 'lucide-react';
 import { type TestProfile } from '@/lib/types';
 import { toast } from 'sonner';
@@ -100,6 +102,27 @@ export default function HomeClient({ featuredPackages }: HomeClientProps) {
                   <p className="font-sans text-sm sm:text-base lg:text-lg text-brand-gold-dark font-bold uppercase tracking-wider mt-1.5">
                     {"Chidambaram's Advanced Scan, Echo & Diagnostic Pathology Laboratory"}
                   </p>
+                </div>
+
+                {/* Conversion-Focused Mobile Contact Bar */}
+                <div className="flex flex-wrap items-center gap-3 pt-2">
+                  <a
+                    href="tel:+919360933128"
+                    className="inline-flex items-center gap-2 bg-brand-emerald text-brand-cream hover:bg-brand-emerald-dark px-4 py-2.5 rounded-xl font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-0.5 group cursor-pointer border border-transparent"
+                  >
+                    <Phone className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:rotate-12" />
+                    <span>Call Us: +91 93609 33128</span>
+                  </a>
+                  
+                  <a
+                    href="https://wa.me/919360933128?text=Hello%20Aradhiya%20Scans%2C%20I%20would%20like%20to%20book%20an%20appointment."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-brand-white border border-brand-emerald/10 hover:border-brand-emerald/30 text-brand-emerald hover:bg-brand-cream px-4 py-2.5 rounded-xl font-bold text-xs tracking-wider uppercase transition-all duration-300 shadow-xs hover:shadow-sm hover:-translate-y-0.5 group cursor-pointer"
+                  >
+                    <MessageSquare className="h-3.5 w-3.5 shrink-0 text-brand-emerald transition-transform group-hover:scale-110" />
+                    <span>Book via WhatsApp</span>
+                  </a>
                 </div>
               </div>
 
