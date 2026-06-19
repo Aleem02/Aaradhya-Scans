@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Aradhiya Scans & Lab" }],
   creator: "Aradhiya Scans & Lab",
   publisher: "Aradhiya Scans & Lab",
-  metadataBase: new URL("https://aradhiyascans.com"),
+  metadataBase: new URL("https://aradhiyascans.in"),
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "Aradhiya Scans & Lab | Precision Diagnostics",
     description: "Premium medical scans, blood tests, and health checkups in Chidambaram, Tamil Nadu. Dedicated to absolute precision and patient comfort.",
-    url: "https://aradhiyascans.com",
+    url: "https://aradhiyascans.in",
     siteName: "Aradhiya Scans & Lab",
     locale: "en_IN",
     type: "website"

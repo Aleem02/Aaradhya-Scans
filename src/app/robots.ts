@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/admin', // Prevent indexing of administrative dashboard
     },
-    sitemap: 'https://aradhiyascans.com/sitemap.xml',
+    sitemap: 'https://aradhiyascans.in/sitemap.xml',
   };
 }

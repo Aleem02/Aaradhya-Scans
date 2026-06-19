@@ -65,8 +65,8 @@ export default function ContactPage() {
                   </li>
                   <li className="flex items-center gap-x-3">
                     <Mail className="h-5 w-5 text-brand-emerald shrink-0" />
-                    <a href="mailto:info@aradhiyascans.com" className="hover:text-brand-emerald-dark font-medium transition-colors">
-                      info@aradhiyascans.com
+                    <a href="mailto:info@aradhiyascans.in" className="hover:text-brand-emerald-dark font-medium transition-colors">
+                      info@aradhiyascans.in
                     </a>
                   </li>
                   <li className="flex items-start gap-x-3">

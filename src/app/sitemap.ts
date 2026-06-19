@@ -3,7 +3,7 @@ import { servicesData } from '@/data/servicesData';
 import { fetchTests, fetchTestProfiles } from '@/lib/tests-service';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://aradhiyascans.com';
+  const baseUrl = 'https://aradhiyascans.in';
 
   // Base routes
   const routes = ['', '/about', '/contact', '/services', '/tests'].map((route) => ({

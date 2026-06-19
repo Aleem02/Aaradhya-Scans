@@ -1338,7 +1338,7 @@ function AdminLoginForm({ login }: { login: (e: string, p: string) => Promise<vo
               <input
                 id="admin-email"
                 type="email"
-                placeholder="admin@aradhiyascans.com"
+                placeholder="admin@aradhiyascans.in"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full pl-11 pr-4 py-3 rounded-full bg-brand-cream/40 border border-brand-charcoal/5 focus:outline-none focus:border-brand-emerald/30 text-xs font-medium transition"
