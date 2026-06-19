@@ -352,7 +352,6 @@ export default function HomeClient({ featuredPackages }: HomeClientProps) {
                           const slidePrice = pkg.price;
                           const slideDiscountPrice = pkg.discountPrice;
                           const slideHasDiscount = !!slidePrice && !!slideDiscountPrice && slidePrice > slideDiscountPrice;
-                          const slideDiscountPercent = slideHasDiscount ? Math.round(((slidePrice! - slideDiscountPrice!) / slidePrice!) * 100) : 0;
                           const slideSavings = slideHasDiscount ? slidePrice! - slideDiscountPrice! : 0;
                           const slideTestCount = [
                             ...(pkg.includedCategories?.flatMap(c => c.tests || []) || []),
